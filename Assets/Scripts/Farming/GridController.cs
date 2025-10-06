@@ -35,8 +35,6 @@ public class GridController : MonoBehaviour
 
         Vector3 startpoint = minPoint.position + new Vector3(0.5f, 0.5f, 0.0f);
 
-        //Instantiate(baseGridBlock, startpoint, Quaternion.identity);
-
         int gridSizeX = Mathf.RoundToInt(maxPoint.position.x - minPoint.position.x);
         int gridSizeY = Mathf.RoundToInt(maxPoint.position.y - minPoint.position.y);
 
@@ -51,6 +49,7 @@ public class GridController : MonoBehaviour
                 GrowBlock growBlock = Instantiate(baseGridBlock, startpoint + new Vector3(x, y, 0f), Quaternion.identity);
                 growBlock.transform.SetParent(transform);
                 growBlock.spriteRenderer.sprite = null;
+                growBlock.SetGridPosition(x, y);
                 currentRow.blocks.Add(growBlock);
                
 
@@ -59,6 +58,19 @@ public class GridController : MonoBehaviour
                     growBlock.spriteRenderer.sprite = null;
                     growBlock.preventUse = true;
                     
+                }
+
+                if (GridInfo.instance.hasGrid)
+                {
+                    BlockInfo storedBlock = GridInfo.instance.theGrid[y].blocks[x];
+
+                    growBlock.currentStage = storedBlock.currentStage;
+                    growBlock.isWatered = storedBlock.isWatered;
+
+                    growBlock.SetSoilSprite();
+                    growBlock.UpdateCropSprite();
+
+
                 }
             }
             
