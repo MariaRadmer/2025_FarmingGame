@@ -1,6 +1,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GridInfo : MonoBehaviour
 {
@@ -47,6 +48,44 @@ public class GridInfo : MonoBehaviour
         theGrid[y].blocks[x].isWatered= growBlock.isWatered;
 
     }
+
+    public void GrowCrops()
+    {
+        for(int y = 0;y<theGrid.Count;y++)
+        {
+            for (int x = 0; x < theGrid[y].blocks.Count; x++)
+            {
+                BlockInfo current = theGrid[y].blocks[x];
+
+                if (current.isWatered)
+                {
+                    switch(current.currentStage)
+                    {
+                        case GrowBlock.GrowthStage.Planted:
+                            current.currentStage = GrowBlock.GrowthStage.Growing1;
+                            break;
+                        case GrowBlock.GrowthStage.Growing1:
+                            current.currentStage = GrowBlock.GrowthStage.Growing2;
+                            break;
+                        case GrowBlock.GrowthStage.Growing2:
+                            current.currentStage = GrowBlock.GrowthStage.Ripe;
+                            break;
+
+                    }
+
+                    current.isWatered = false;
+                }
+            }
+        }
+    }
+    /*
+    private void Update()
+    {
+        if(Keyboard.current.yKey.wasPressedThisFrame)
+        {
+            GrowCrops();
+        }
+    }*/
 }
 
 [System.Serializable]
