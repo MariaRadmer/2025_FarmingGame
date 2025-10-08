@@ -20,7 +20,10 @@ public class BedController : MonoBehaviour
                 Keyboard.current.spaceKey.wasPressedThisFrame || 
                 Keyboard.current.eKey.wasPressedThisFrame)
             {
-                GridInfo.instance.GrowCrops();
+                if(TimeController.instance != null)
+                {
+                    TimeController.instance.EndDay();
+                }
             }
         }
     }

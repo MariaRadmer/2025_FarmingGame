@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|c:\\users\\mari9\\desktop\\unity projects\\farming game\\farming game\\assets\\scripts\\cropcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cropcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\assets\\scripts\\farming\\gridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\farming\\gridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|c:\\users\\mari9\\desktop\\unity projects\\farming game\\farming game\\assets\\scripts\\timecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\timecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|c:\\users\\mari9\\desktop\\unity projects\\farming game\\farming game\\assets\\scripts\\bedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\assets\\scripts\\dayendcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dayendcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\assets\\scripts\\bedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|c:\\users\\mari9\\desktop\\unity projects\\farming game\\farming game\\assets\\scripts\\farming\\gridinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\farming\\gridinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\assets\\scripts\\farming\\growblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\farming\\growblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\assets\\scripts\\player\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E25CF858-53E1-A2C2-66BF-B55410DF0C30}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +30,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BedController.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\BedController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BedController.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\BedController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BedController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T08:43:10.752Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\Player\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerController.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\Player\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerController.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAAAIAAAAAAAAAA",
+              "Title": "CropController.cs",
+              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\CropController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CropController.cs",
+              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\CropController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CropController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T08:48:17.361Z",
+              "WhenOpened": "2025-10-08T08:22:19.283Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GridController.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\Farming\\GridController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Farming\\GridController.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\Farming\\GridController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Farming\\GridController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAAAFgAAAA9AAAA",
+              "DocumentIndex": 2,
+              "Title": "DayEndController.cs",
+              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\DayEndController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DayEndController.cs",
+              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\DayEndController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DayEndController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T08:33:05.443Z",
+              "WhenOpened": "2025-10-08T08:02:00.812Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "GrowBlock.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\Farming\\GrowBlock.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Farming\\GrowBlock.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\Farming\\GrowBlock.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Farming\\GrowBlock.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAAGsAAAAdAAAA",
+              "Title": "UIController.cs",
+              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\Player\\UIController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\UIController.cs",
+              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\Player\\UIController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\UIController.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T08:28:58.434Z"
+              "WhenOpened": "2025-10-08T07:19:34.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TimeController.cs",
+              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\TimeController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TimeController.cs",
+              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\TimeController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TimeController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAACsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T07:01:37.272Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GridInfo.cs",
-              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\Farming\\GridInfo.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Farming\\GridInfo.cs",
-              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\Farming\\GridInfo.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Farming\\GridInfo.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAEcAAAAiAAAA",
+              "Title": "BedController.cs",
+              "DocumentMoniker": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\BedController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BedController.cs",
+              "ToolTip": "C:\\Users\\mari9\\Desktop\\Unity projects\\Farming Game\\Farming Game\\Assets\\Scripts\\BedController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BedController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T08:26:56.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T08:43:10.752Z"
             }
           ]
         }
