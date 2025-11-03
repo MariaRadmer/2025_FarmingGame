@@ -66,6 +66,8 @@ public class GridController : MonoBehaviour
 
                     growBlock.currentStage = storedBlock.currentStage;
                     growBlock.isWatered = storedBlock.isWatered;
+                    growBlock.cropType = storedBlock.cropType;
+                    growBlock.growthFailChance = storedBlock.growthFailChance;
 
                     growBlock.SetSoilSprite();
                     growBlock.UpdateCropSprite();
@@ -91,7 +93,7 @@ public class GridController : MonoBehaviour
 
         if (intX < gridSize.x && intY < gridSize.y)
         {
-            Debug.Log($"Click at world pos ({x}, {y}) -> grid ({intX}, {intY})");
+            //Debug.Log($"Click at world pos ({x}, {y}) -> grid ({intX}, {intY})");
             return blockRows[intY].blocks[intX];
         }
 

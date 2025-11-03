@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public InputActionReference moveInput, actionInput;
     public CropManager cropManager;
     public Animator animator;
+    public CropController.CropType seedCropType; 
 
     public float moveSpeed = 5f;
 
@@ -166,7 +167,11 @@ public class PlayerController : MonoBehaviour
                     block.WaterSoil();
                     break;
                 case ToolType.seeds:
-                    block.PlantCrop();
+                    
+                    block.PlantCrop(seedCropType);
+                    
+                    CropController.instance.UseSeed(seedCropType);
+
                     break;
                 case ToolType.basket:
                     block.HarvestCrop();

@@ -32,6 +32,8 @@ public class GrowBlock : MonoBehaviour
 
     public bool preventUse = false;
 
+    public CropController.CropType cropType;
+    public float growthFailChance;
 
     private Vector2Int gridPosition;
     
@@ -144,34 +146,39 @@ public class GrowBlock : MonoBehaviour
         SetSoilSprite();
     }
 
-    public void PlantCrop()
+    public void PlantCrop(CropController.CropType cropToPlant)
     {
         if (preventUse) return;
         if (currentStage  == GrowthStage.Plowed && isWatered)
         {
             currentStage = GrowthStage.Planted;
         }
+        cropType = cropToPlant;
+        growthFailChance = CropController.instance.GetCropInfo(cropType).growthFailChance;
         UpdateCropSprite();
     }
 
     public void UpdateCropSprite()
     {
+
+        CropInfo activeCropInfo = CropController.instance.GetCropInfo(cropType);
+
         switch (currentStage)
         {
             case GrowthStage.Planted:
                 
-                cropSprite.sprite = cropPlanted;
+                cropSprite.sprite = activeCropInfo.planted;
                 break;
 
             case GrowthStage.Growing1:
-                cropSprite.sprite = cropGrowing1;
+                cropSprite.sprite = activeCropInfo.growStage1;
                 break;
             case GrowthStage.Growing2:
-                cropSprite.sprite = cropGrowing2;
+                cropSprite.sprite = activeCropInfo.growStage2;
                 break;
 
             case GrowthStage.Ripe:
-                cropSprite.sprite = cropRipe;
+                cropSprite.sprite = activeCropInfo.ripe;
                 break;
         }
 
@@ -204,6 +211,7 @@ public class GrowBlock : MonoBehaviour
             currentStage = GrowthStage.Plowed;
             SetSoilSprite();
             cropSprite.sprite = null;
+            CropController.instance.AddCrop(cropType);
         }
     }
 

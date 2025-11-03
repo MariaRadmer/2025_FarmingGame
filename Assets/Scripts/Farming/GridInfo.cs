@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -46,6 +45,8 @@ public class GridInfo : MonoBehaviour
 
         theGrid[y].blocks[x].currentStage = growBlock.currentStage;
         theGrid[y].blocks[x].isWatered= growBlock.isWatered;
+        theGrid[y].blocks[x].cropType = growBlock.cropType;
+        theGrid[y].blocks[x].growthFailChance = growBlock.growthFailChance;
 
     }
 
@@ -59,21 +60,33 @@ public class GridInfo : MonoBehaviour
 
                 if (current.isWatered)
                 {
-                    switch(current.currentStage)
-                    {
-                        case GrowBlock.GrowthStage.Planted:
-                            current.currentStage = GrowBlock.GrowthStage.Growing1;
-                            break;
-                        case GrowBlock.GrowthStage.Growing1:
-                            current.currentStage = GrowBlock.GrowthStage.Growing2;
-                            break;
-                        case GrowBlock.GrowthStage.Growing2:
-                            current.currentStage = GrowBlock.GrowthStage.Ripe;
-                            break;
 
+                    float growthRoll = Random.Range(0f, 100f);
+                    bool failed = growthRoll < current.growthFailChance; // fail if roll is less than chance
+
+                    if (!failed)
+                    {
+                        switch (current.currentStage)
+                        {
+                            case GrowBlock.GrowthStage.Planted:
+                                current.currentStage = GrowBlock.GrowthStage.Growing1;
+                                break;
+                            case GrowBlock.GrowthStage.Growing1:
+                                current.currentStage = GrowBlock.GrowthStage.Growing2;
+                                break;
+                            case GrowBlock.GrowthStage.Growing2:
+                                current.currentStage = GrowBlock.GrowthStage.Ripe;
+                                break;
+                        }
                     }
 
+                    // consume the watering regardless of success
                     current.isWatered = false;
+                }
+
+                if(current.currentStage == GrowBlock.GrowthStage.Plowed)
+                {
+                    current.currentStage = GrowBlock.GrowthStage.Empty;
                 }
             }
         }
@@ -93,6 +106,8 @@ public class BlockInfo
 {
     public bool isWatered;
     public GrowBlock.GrowthStage currentStage;
+    public CropController.CropType cropType;
+    public float growthFailChance;
 }
 
 [System.Serializable]
