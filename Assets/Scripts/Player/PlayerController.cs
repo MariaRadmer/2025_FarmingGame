@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         UIController.instance.SwitchTool((int)currentTool);
+        moveInput.action.Enable();
+        actionInput.action.Enable();
     }
 
     void Update()
@@ -63,7 +65,7 @@ public class PlayerController : MonoBehaviour
         } else
         {
             rb2D.linearVelocity = moveInput.action.ReadValue<Vector2>().normalized * moveSpeed;
-
+            
             if (rb2D.linearVelocity.x < 0)
             {
                 transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -73,7 +75,7 @@ public class PlayerController : MonoBehaviour
                 transform.localScale = Vector3.one;
             }
         }
-
+        
 
 
         bool hasSwitchedTool = false;
