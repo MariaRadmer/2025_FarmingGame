@@ -1,5 +1,7 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -8,39 +10,46 @@ public class UIController : MonoBehaviour
     public GameObject[] toolbarActivatorIcons;
     public TMP_Text timeText;
 
+    public InventoryController inventoryController;
+    public Image seedImage;
+
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-        } else
+        }
+        else
         {
             Destroy(gameObject);
         }
-        
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Keyboard.current.iKey.wasPressedThisFrame)
+        {
+            inventoryController.OpenClose();
+        }
     }
 
     public void SwitchTool(int selected)
     {
-        foreach ( GameObject icon in toolbarActivatorIcons )
+        foreach (GameObject icon in toolbarActivatorIcons)
         {
-            icon.SetActive( false );
+            icon.SetActive(false);
         }
 
-        toolbarActivatorIcons[selected].SetActive( true );
+        toolbarActivatorIcons[selected].SetActive(true);
     }
 
     public void UpdateTimeText(float currentTime)
@@ -48,20 +57,28 @@ public class UIController : MonoBehaviour
         if (currentTime < 12)
         {
             timeText.text = Mathf.FloorToInt(currentTime) + "AM";
-        } else if(currentTime < 13)
+        }
+        else if (currentTime < 13)
         {
             timeText.text = "12PM";
-        } else if (currentTime < 24)
+        }
+        else if (currentTime < 24)
         {
-            timeText.text = Mathf.FloorToInt(currentTime)-12 + "PM";
-        } else if (currentTime < 25)
+            timeText.text = Mathf.FloorToInt(currentTime) - 12 + "PM";
+        }
+        else if (currentTime < 25)
         {
             timeText.text = "12AM";
-        } else
+        }
+        else
         {
             timeText.text = Mathf.FloorToInt(currentTime) - 24 + "AM";
         }
 
-        
+    }
+
+    public void SwithSeed(CropController.CropType crop)
+    {
+        seedImage.sprite = CropController.instance.GetCropInfo(crop).seedType;
     }
 }

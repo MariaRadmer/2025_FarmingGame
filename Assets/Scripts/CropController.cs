@@ -13,7 +13,8 @@ public class CropController : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-        } else
+        }
+        else
         {
             Destroy(gameObject);
         }
@@ -28,16 +29,17 @@ public class CropController : MonoBehaviour
         Potato,
         Strawberry,
         Tomato,
-        Avocado
+        Avocado,
+        Onion
     }
 
     public List<CropInfo> cropList = new List<CropInfo>();
 
     public CropInfo GetCropInfo(CropType cropType)
     {
-        foreach(CropInfo crop in cropList)
+        foreach (CropInfo crop in cropList)
         {
-            if(crop.cropType == cropType)
+            if (crop.cropType == cropType)
             {
                 return crop;
             }
@@ -47,11 +49,11 @@ public class CropController : MonoBehaviour
 
     public void UseSeed(CropType seedToUse)
     {
-        foreach(CropInfo crop in cropList)
+        foreach (CropInfo crop in cropList)
         {
-            if(crop.cropType == seedToUse)
+            if (crop.cropType == seedToUse)
             {
-                if(crop.seedAmount > 0)
+                if (crop.seedAmount > 0)
                 {
                     crop.seedAmount--;
                 }

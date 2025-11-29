@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public InputActionReference moveInput, actionInput;
     public CropManager cropManager;
     public Animator animator;
-    public CropController.CropType seedCropType; 
+    public CropController.CropType seedCropType;
 
     public float moveSpeed = 5f;
 
@@ -34,16 +34,17 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-        } else
+        }
+        else
         {
             Destroy(gameObject);
         }
 
-        
+
     }
 
     void Start()
@@ -57,15 +58,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        if(toolWaitCounter > 0)
+        if (toolWaitCounter > 0)
         {
-            toolWaitCounter-= Time.deltaTime;
+            toolWaitCounter -= Time.deltaTime;
             rb2D.linearVelocity = Vector2.zero;
 
-        } else
+        }
+        else
         {
             rb2D.linearVelocity = moveInput.action.ReadValue<Vector2>().normalized * moveSpeed;
-            
+
             if (rb2D.linearVelocity.x < 0)
             {
                 transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -75,7 +77,7 @@ public class PlayerController : MonoBehaviour
                 transform.localScale = Vector3.one;
             }
         }
-        
+
 
 
         bool hasSwitchedTool = false;
@@ -85,7 +87,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Pressed tab");
             currentTool++;
 
-            if((int) currentTool >= 4)
+            if ((int)currentTool >= 4)
             {
                 currentTool = ToolType.plow;
             }
@@ -118,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
         if (hasSwitchedTool)
         {
-            UIController.instance.SwitchTool((int) currentTool);
+            UIController.instance.SwitchTool((int)currentTool);
         }
 
         animator.SetFloat("speed", rb2D.linearVelocity.magnitude);
@@ -142,23 +144,24 @@ public class PlayerController : MonoBehaviour
             }
 
             toolIndicator.position = new Vector3(Mathf.FloorToInt(toolIndicator.position.x) + 0.5f, Mathf.FloorToInt(toolIndicator.position.y) + 0.5f, 0f);
-        } else
+        }
+        else
         {
             toolIndicator.position = new Vector3(0, 0, -20f);
         }
 
-       
+
     }
 
     private void UseTool()
     {
-       
+
         GrowBlock block = GridController.instance.GetBlock(toolIndicator.position.x - .5f, toolIndicator.position.y - .5f);
         toolWaitCounter = toolWaitTime;
 
-        if(block != null )
+        if (block != null)
         {
-            switch(currentTool)
+            switch (currentTool)
             {
                 case ToolType.plow:
                     block.PloughSoil();
@@ -169,9 +172,9 @@ public class PlayerController : MonoBehaviour
                     block.WaterSoil();
                     break;
                 case ToolType.seeds:
-                    
+
                     block.PlantCrop(seedCropType);
-                    
+
                     CropController.instance.UseSeed(seedCropType);
 
                     break;
@@ -183,13 +186,12 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    
 
-    // TODO Make the facing dirction work it only takes what the player stands on now
-    private void OnInteract(InputAction.CallbackContext context)
+
+    public void SwitchSeed(CropController.CropType newSeed)
     {
-        Vector3Int playerTilePos = cropManager.groundTilemap.WorldToCell(transform.position);
-        cropManager.tillOrWaterSoil(playerTilePos);
-
+        seedCropType = newSeed;
     }
+
+
 }
