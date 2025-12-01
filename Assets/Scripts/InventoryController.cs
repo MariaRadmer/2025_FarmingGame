@@ -4,6 +4,7 @@ public class InventoryController : MonoBehaviour
 {
 
     public SeedDisplay[] seedDisplays;
+    public CropDisplay[] cropDisplays;
     public void OpenClose()
     {
         if (gameObject.activeSelf == false)
@@ -22,6 +23,10 @@ public class InventoryController : MonoBehaviour
         foreach (SeedDisplay display in seedDisplays)
         {
             display.UpdateSeedDisplay();
+        }
+        foreach (CropDisplay display in cropDisplays)
+        {
+            display.UpdateCropDisplay();
         }
     }
 }

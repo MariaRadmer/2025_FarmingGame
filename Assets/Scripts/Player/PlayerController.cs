@@ -58,6 +58,18 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
+        if (UIController.instance != null)
+        {
+            if(UIController.instance.inventoryController != null)
+            {
+                if(UIController.instance.inventoryController.gameObject.activeSelf == true)
+                {
+                    rb2D.linearVelocity = Vector2.zero;
+                    return;
+                }
+            }
+        }
+
         if (toolWaitCounter > 0)
         {
             toolWaitCounter -= Time.deltaTime;
@@ -174,8 +186,7 @@ public class PlayerController : MonoBehaviour
                 case ToolType.seeds:
 
                     block.PlantCrop(seedCropType);
-
-                    CropController.instance.UseSeed(seedCropType);
+                  
 
                     break;
                 case ToolType.basket:
